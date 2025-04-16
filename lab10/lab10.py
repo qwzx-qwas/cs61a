@@ -110,7 +110,7 @@ def eval_define(expressions):
     """
     "*** YOUR CODE HERE ***"
     if expressions is not nil:
-        symbol =expressions.first
+        symbol =expressions.first#由于define，故第一个元素symbol不需要eval（calc_eval也没有相应的evaluate过程）
         value = calc_eval(expressions.rest.first)
         bindings[symbol] = value
     return symbol
